@@ -4,9 +4,18 @@ pipeline {
     stage('Test') {
       steps {
         sh '''
-          curl --version // Check the version of curl
-          node --version // Check the version of Node.js
-          npm --version  // Check the version of npm
+          curl --version
+          node --version
+          npm --version
+        '''
+      }
+    }
+    stage('upload image to dockerhub') {
+      steps {
+        sh '''
+          curl --version
+          node --version
+          npm --version
         '''
       }
     }
