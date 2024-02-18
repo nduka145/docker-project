@@ -10,6 +10,11 @@ pipeline {
         '''
       }
     }
+    stage('Manual Approval') {
+      steps {
+        input("Do you want to proceed with deploying to production?")
+        }
+      }
     stage('upload image to dockerhub') {
       steps {
         sh '''
