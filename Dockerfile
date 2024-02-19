@@ -14,7 +14,7 @@ RUN wget -q https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.98/bin/apache-tomcat-8
     rm /tmp/tomcat.tar.gz
 
 # Expose Tomcat ports
-EXPOSE 8080
+EXPOSE 8081
 
 # Start Tomcat
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
