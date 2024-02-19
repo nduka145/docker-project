@@ -5,8 +5,6 @@ pipeline {
       steps {
         sh '''
           curl --version
-          node --version
-          npm --version
         '''
       }
     }
@@ -15,14 +13,3 @@ pipeline {
         input("Do you want to proceed with deploying to production?")
         }
       }
-    stage('upload image to dockerhub') {
-      steps {
-        sh '''
-          curl --version
-          node --version
-          npm --version
-        '''
-      }
-    }
-  }
-}
