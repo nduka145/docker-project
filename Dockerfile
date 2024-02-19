@@ -7,8 +7,8 @@ RUN yum -y update && \
     yum clean all
 
 # Download and install Apache Tomcat
-ENV TOMCAT_VERSION 9.0.61
-RUN wget -q https://downloads.apache.org/tomcat/tomcat-9/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz -O /tmp/tomcat.tar.gz && \
+ENV TOMCAT_VERSION 8.5.98
+RUN wget -q https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.98/bin/apache-tomcat-8.5.98.tar.gz -O /tmp/tomcat.tar.gz && \
     tar xf /tmp/tomcat.tar.gz -C /opt && \
     mv /opt/apache-tomcat-${TOMCAT_VERSION} /opt/tomcat && \
     rm /tmp/tomcat.tar.gz
