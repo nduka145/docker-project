@@ -13,3 +13,5 @@ pipeline {
         input("Do you want to proceed with deploying to production?")
         }
       }
+  }
+}
